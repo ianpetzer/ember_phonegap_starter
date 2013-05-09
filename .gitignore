@@ -1,0 +1,9 @@
+tmp/*
+.DS_Store
+res/*
+site/*
+phonegap.js
+.idea
+
+  
+index.html

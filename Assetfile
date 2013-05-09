@@ -1,0 +1,82 @@
+require 'barber'
+require "rake-pipeline-web-filters"
+require "json"
+require "uglifier"
+
+output "site"
+
+input "js" do
+  match "**/*.js" do
+    minispade :rewrite_requires => true, :string => false, :module_id_generator => Proc.new { |input|
+      input.path.dup.\
+      sub(/\.js$/, '')
+    }
+  end
+
+  match "**/*.hbs" do
+    handlebars :wrapper_proc => Barber::Ember::FilePrecompiler
+  end
+
+  match "**/*.js" do
+    concat "app.js"
+    if ENV['RAKEP_MODE'] == "production"
+      uglify
+    end
+  end
+
+end
+
+input "lib" do
+  match "**/*.js" do
+    filter(
+        Rake::Pipeline::OrderingConcatFilter,
+        [
+            "minispade.js",
+            "jquery-2.0.0.js",
+            "handlebars-1.0.0.rc.3.js",
+            "ember.js"
+        ],
+        "libs.js"
+    )
+  end
+end
+
+#input "prod_lib" do
+#  match "**/*.js" do
+#    filter(
+#        Rake::Pipeline::OrderingConcatFilter,
+#        [
+#            "minispade.js",
+#            "jquery-2.0.0.min.js",
+#            "handlebars.runtime.js",
+#            "ember.js"
+#        ],
+#        "libs.js"
+#    )
+#    uglify
+#  end
+#end
+
+input "css" do
+  match "**/*.css" do
+    filter(
+        Rake::Pipeline::OrderingConcatFilter,
+        [
+            "bootstrap.min.css",
+            "bootstrap-responsive.min.css",
+            "highlight/sunburst.css"
+        ],
+        "app.css"
+    )
+  end
+end
+
+output ""
+
+input "static" do
+  match "index.html" do
+
+    copy
+  end
+end
+
