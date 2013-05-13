@@ -72,6 +72,9 @@ The simulator should pop up with your modified app. If you can't run the scrit y
 I've got this succesfully working aginst iOS/ Android and BB10
 Hopefully I'll extend this documentation soon to include steps on setting up Android and BB10 and other target mobile operating systems. Till then it shouldn't be too tricky to figure out how to replicate this for Android and BB10. If you're struggling, ping me and I'll try add the documentation for the rest
 
+## Find out more
+
+If you like this or want to hear about other tech stuff follow me on twitter, https://twitter.com/ianpetzer
 
 ##TODO
 Steps for other mobile operating system
@@ -80,6 +83,7 @@ Repo with scripts for building full directory structure including iOS/ Android e
 
 Example unit tests
 
+Dependency management to pull in libs instead of storing them in the libs folder
 
 
 
