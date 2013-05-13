@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+      <link rel="stylesheet" type="text/css" href="site/app.css" />
+        <title>Credit Crunch</title>
+    </head>
+    <body>
+        <script src="site/libs.js"></script>
+        <script src="site/app.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                App = Ember.Application.create();
+                window.addEventListener('load', function() {
+                    new FastClick(document.body);
+                }, false);
+                minispade.requireAll(new RegExp('.*'));
+                App.phoneGapApp.initialize();
+                if (window.device) {
+                    // A mobile device is being used
+                } else {
+                    //If a mobile device is not being used then lets kick off the app
+                    App.phoneGapApp.onDeviceReady();
+                }
+            })
+
+        </script>
+    </body>
+</html>
