@@ -10,6 +10,8 @@ The index.html file pulls in the dependencies (Ember.js, jQuery 2, Fastclick, Ha
 
 Rake Pipeline is used as the build tool to concatenate the dependencies and application code. The output of this build process is placed into the site folder. index.html pulls in thesejs files.
 
+This repo can be used to replace the sample PhoneGap app that is created when you build a new Cordova application. Ie.. the contents of the www folder for ios PhoneGap apps, the root folder for android PhoneGap apps or the www folder for BlackBerry PhoneGap apps
+
 ## First steps, coding in your browser
 
 You can clone this repo and then run:
@@ -57,8 +59,6 @@ You just need to go into ios/www and rename your cordova-X.X.X.js file to phoneg
 
 ## Develop in the browser, test in the simulator  (iOS)
 
-
-
 Once you have your ios folder set up as described above you can go back to the / ember_mobile_app /ember_app folder, and make some changes to the app.
 
 Make sure you're running the rakep server and you'll be able to see the changes at http://localhost:9292/index.html
@@ -75,7 +75,9 @@ Hopefully I'll extend this documentation soon to include steps on setting up And
 
 ##TODO
 Steps for other mobile operating system
+
 Repo with scripts for building full directory structure including iOS/ Android etc. etc.
+
 Example unit tests
 
 
