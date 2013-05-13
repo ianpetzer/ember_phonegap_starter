@@ -27,31 +27,31 @@ Once you have installed the requirments for your environment, you can create app
 
 I set up my folders like this:
 
-/ ember_mobile_app /ember_app
-                   /ios
-                   /android
-                   /bb
-                   /win_phone_8
-                   /phonegap-2.7.0
+    / ember_mobile_app /ember_app
+                       /ios
+                       /android
+                       /bb
+                       /win_phone_8
+                       /phonegap-2.7.0
 
 This is a top level folder to contain everything for your app. The actual code for your app is stored in the ember_app folder ( THis is where you clone this repo into). Then there are wrapper apps for each of the mobile environments sitting alongside the ember_app folder. The phonegap-2.7.0 folder contains the contents of the phonegap download
 
 So, go ahead and download the latest phone gap and then extract it. If you are in the ember_mobile_app directory, your commands should look something like:
 
-ditto ~/Downloads/phonegap-2.7.0.zip .
-tar -xvf phonegap-2.7.0.zip
-rm phonegap-2.7.0.zip
+    ditto ~/Downloads/phonegap-2.7.0.zip .
+    tar -xvf phonegap-2.7.0.zip
+    rm phonegap-2.7.0.zip
 
 ## Building an iOS wrapper
 
 If you have a directory structure like I've described above then you can run the following command to create an iOS wrapper. This is run from the the top level ember_mobile_app directory:
 
-./phonegap-2.7.0/lib/ios/bin/create ./ios com.example.EmberPhoneGap EmberPhoneGap
+    ./phonegap-2.7.0/lib/ios/bin/create ./ios com.example.EmberPhoneGap EmberPhoneGap
 
 This will create an iOS wrapper in the ios folder. You can test that this wrapper is working succesfully by running the following commands from the top level ember_mobile_app directory
 
-./ios/cordova/build
-./ios/cordova/emulate
+    ./ios/cordova/build
+    ./ios/cordova/emulate
 
 If the iOS simulator launches with the PhoneGap demo app, then you are good to go. Otherwise you might be missing some dependencies like XCode.
 
