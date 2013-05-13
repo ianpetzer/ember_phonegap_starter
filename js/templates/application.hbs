@@ -2,7 +2,11 @@
         <div class="twelve columns">
             <h1>Ember on the mobile :)</h1>
             <hr>
-            {{#linkTo 'index'}}Index{{/linkTo}}
+            <ul>
+                <li>{{#linkTo 'index'}}Index{{/linkTo}}</li>
+                <li>{{#linkTo 'demo'}}Demo{{/linkTo}}</li>
+            </ul>
+
             <p>{{outlet}}</p>
         </div>
     </div>
