@@ -2,6 +2,8 @@
 
 This can be used as a kickstart for a HTML5 / Javascript hybrid webapp based on Ember.js
 
+[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://www.youtube.com/watch?v=Bs6xz-pxBVU)
+
 ## Basic structure
 
 You can use PhoneGap / Cordova to generate wrapper apps for your target platform. Each of these will create a web view that is pointed at index.html
