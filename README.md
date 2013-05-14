@@ -2,12 +2,12 @@
 
 This can be used as a kickstart for a HTML5 / Javascript hybrid webapp based on Ember.js
 
-[![ScreenShot](http://imgur.com/5aD9XEZ)](http://www.youtube.com/watch?v=Bs6xz-pxBVU)
+[![ScreenShot](http://i.imgur.com/5aD9XEZ.png)](http://www.youtube.com/watch?v=Bs6xz-pxBVU)
 
 ## Basic structure
 
 You can use PhoneGap / Cordova to generate wrapper apps for your target platform. Each of these will create a web view that is pointed at index.html
-  
+
 The index.html file pulls in the dependencies (Ember.js, jQuery 2, Fastclick, HandleBars and Minispade), as well as the application code.
 
 Rake Pipeline is used as the build tool to concatenate the dependencies and application code. The output of this build process is placed into the site folder. index.html pulls in thesejs files.
