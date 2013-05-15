@@ -2,7 +2,8 @@
 
 This can be used as a kickstart for a HTML5 / Javascript hybrid webapp based on Ember.js
 
-Check out the screencast showing how easy it is to get started.
+Check out the [screencast](http://www.youtube.com/watch?v=Bs6xz-pxBVU) showing how easy it is to get started:
+
 [![ScreenShot](http://i.imgur.com/IRMhuxa.png?1)](http://www.youtube.com/watch?v=Bs6xz-pxBVU)
 
 ## Basic structure
