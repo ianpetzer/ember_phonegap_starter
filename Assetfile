@@ -3,6 +3,14 @@ require "rake-pipeline-web-filters"
 require "json"
 require "uglifier"
 
+ember_template_name_proc = proc { |input|
+  dir = File.dirname(input.path)
+  dir = dir.sub!('templates/', '')
+  template_name = File.basename(input.path, File.extname(input.path))
+  template_name = dir + '/' + template_name if !dir.nil?
+  template_name
+}
+
 output "site"
 
 input "js" do
@@ -14,7 +22,7 @@ input "js" do
   end
 
   match "**/*.hbs" do
-    handlebars :wrapper_proc => Barber::Ember::FilePrecompiler
+    handlebars wrapper_proc: Barber::Ember::FilePrecompiler, :key_name_proc => ember_template_name_proc
   end
 
   match "**/*.js" do
