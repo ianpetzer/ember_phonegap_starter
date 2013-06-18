@@ -41,8 +41,9 @@ input "lib" do
         [
             "minispade.js",
             "jquery-2.0.0.js",
-            "handlebars-1.0.0.rc.3.js",
-            "ember.js"
+            "handlebars.js",
+            "ember.js",
+            "ember-data.js"
         ],
         "libs.js"
     )
