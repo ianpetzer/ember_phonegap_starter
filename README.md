@@ -1,3 +1,5 @@
+#I would highly recommend that you check out https://github.com/stefanpenner/ember-app-kit as more contemporary solution for building your ember application. It is quite easy to wrap it in a Phone Gap app using the ideas described below
+
 #Starter kit for Ember on the mobile
 
 This can be used as a kickstart for a HTML5 / Javascript hybrid webapp based on Ember.js
